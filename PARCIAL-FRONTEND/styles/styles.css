@@ -1,0 +1,234 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Arabic, sans-serif;
+}
+
+#content {
+  background-color: #aabda4;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  color: white;
+}
+#content img {
+  display: flex;
+  position: absolute;
+  width: 75%;
+  height: 100vh;
+}
+#content #bgTitle {
+  display: flex;
+  top: -50px;
+  font-size: 420px;
+  font-weight: 700;
+  position: absolute;
+  justify-content: space-around;
+}
+#content #player {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: 24.7%;
+  height: 89.5%;
+  z-index: 5;
+  position: relative;
+}
+#content #player:after {
+  content: "";
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95), black);
+}
+#content #player #cover {
+  display: flex;
+  align-self: flex-start;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background: url(../src/img/cover1.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+}
+#content #player #controls {
+  background-color: #040404;
+  width: 100%;
+  align-self: flex-end;
+  border-collapse: collapse;
+  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.7);
+  border-radius: 0px 0px 15px 15px;
+  padding: 25px;
+  position: relative;
+  z-index: 20;
+}
+#content #player #controls #album {
+  display: flex;
+  flex-flow: column;
+  opacity: 0.3;
+  padding-bottom: 5px;
+}
+#content #player #controls #album span {
+  font-size: 16px;
+}
+#content #player #controls #title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#content #player #controls #title span {
+  font-size: 30px;
+}
+#content #player #controls #title button {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: #040404;
+}
+#content #player #controls #title button .audio {
+  visibility: hidden;
+}
+#content #player #controls #title button svg {
+  width: 20px;
+  height: 20px;
+}
+#content #player #controls #title button svg path {
+  fill: #afafaf;
+}
+#content #player #controls #title button svg:hover {
+  cursor: pointer;
+}
+#content #player #controls #title button svg:hover path {
+  fill: #d44343;
+}
+#content #player #controls #title button svg.hide {
+  display: none;
+}
+#content #player #controls #timeline {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+#content #player #controls #timeline span {
+  padding-top: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+#content #player #controls #timeline span#end {
+  color: #949494;
+}
+#content #player #controls #buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+#content #player #controls #buttons svg {
+  width: 20px;
+  height: 20px;
+}
+#content #player #controls #buttons svg path {
+  fill: #949494;
+}
+#content #player #controls #buttons svg:hover {
+  cursor: pointer;
+}
+#content #player #controls #buttons svg:hover path {
+  fill: #d44343;
+}
+#content #player #controls #buttons svg#list {
+  padding: 0;
+}
+#content #player #controls #buttons svg#list path {
+  fill: white;
+}
+#content #player #controls #buttons svg#list:hover {
+  cursor: pointer;
+}
+#content #player #controls #buttons svg#list:hover path {
+  fill: #d44343;
+}
+
+@media (max-width: 375px) {
+  #content {
+    background-color: black;
+  }
+  #content img,
+#content #bgTitle {
+    display: none;
+  }
+  #content #player {
+    width: 100%;
+    height: 100vh;
+  }
+  #content #player:after {
+    content: "";
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95), black);
+  }
+  #content #player #cover {
+    opacity: 1;
+    margin-top: 10px;
+  }
+  #content #player #controls {
+    background-color: black;
+  }
+  #content #player #controls #album {
+    padding-bottom: 30px;
+    padding-top: 40px;
+  }
+  #content #player #controls #album span {
+    font-size: 24px;
+  }
+  #content #player #controls #title {
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  #content #player #controls #title span {
+    font-size: 38px;
+  }
+  #content #player #controls #title button {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+  }
+  #content #player #controls #title button:hover {
+    cursor: pointer;
+  }
+  #content #player #controls #title button:hover path {
+    fill: #d44343;
+  }
+  #content #player #controls #title #icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  #content #player #controls #timeline {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  #content #player #controls #timeline span {
+    font-size: 23px;
+  }
+  #content #player #controls #buttons {
+    padding-top: 40px;
+  }
+  #content #player #controls #buttons svg {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
